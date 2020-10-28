@@ -1,4 +1,4 @@
-package com.istar;
+package com.iStar;
 
 public class Main {
 
