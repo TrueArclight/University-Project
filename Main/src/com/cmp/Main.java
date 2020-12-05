@@ -85,7 +85,7 @@ public class Main {
                     if(created) {
                         int rows = (int) fldRows.getValue();
                         int cols = (int) fldColumns.getValue();
-                        TableModel model = IntMatrix.fillMatrixByRandomValues(intMatrix,rows,cols);
+                        TableModel model = intMatrix.fillMatrixByRandomValues(rows,cols);
                         table.setModel(model);
                     }
                 }
@@ -110,10 +110,11 @@ public class Main {
                     if(created) {
                         int rows = (int) fldRows.getValue();
                         int cols = (int) fldColumns.getValue();
-                        table.setModel(new DefaultTableModel(rows, cols));
-                        intMatrix.quickSort();
-                        TableModel model = IntMatrix.printMatrix(intMatrix,rows,cols);
-                        table.setModel(model);
+                        for(int i = 0;i < 2; i++) {
+                            TableModel model = intMatrix.gradientMatrix(rows, cols, 1);
+                            table.setModel(model);
+                        }
+
                     }
                 }
             });
@@ -128,10 +129,10 @@ public class Main {
                     if(created) {
                         int rows = (int) fldRows.getValue();
                         int cols = (int) fldColumns.getValue();
-                        table.setModel(new DefaultTableModel(rows, cols));
-                        intMatrix.selectionSort();
-                        TableModel model = IntMatrix.printMatrix(intMatrix,rows,cols);
-                        table.setModel(model);
+                        for(int i = 0;i < 2; i++) {
+                            TableModel model = intMatrix.gradientMatrix(rows, cols, 2);
+                            table.setModel(model);
+                        }
                     }
                 }
             });
@@ -146,10 +147,10 @@ public class Main {
                     if(created) {
                         int rows = (int) fldRows.getValue();
                         int cols = (int) fldColumns.getValue();
-                        table.setModel(new DefaultTableModel(rows, cols));
-                        intMatrix.mergeSort();
-                        TableModel model = IntMatrix.printMatrix(intMatrix,rows,cols);
-                        table.setModel(model);
+                        for(int i = 0;i < 2; i++) {
+                            TableModel model = intMatrix.gradientMatrix(rows, cols, 3);
+                            table.setModel(model);
+                        }
                     }
                 }
             });
@@ -164,10 +165,10 @@ public class Main {
                     if(created) {
                         int rows = (int) fldRows.getValue();
                         int cols = (int) fldColumns.getValue();
-                        table.setModel(new DefaultTableModel(rows, cols));
-                        intMatrix.insertionSort();
-                        TableModel model = IntMatrix.printMatrix(intMatrix,rows,cols);
-                        table.setModel(model);
+                        for(int i = 0;i < 2; i++) {
+                            TableModel model = intMatrix.gradientMatrix(rows, cols, 4);
+                            table.setModel(model);
+                        }
                     }
                 }
             });
@@ -182,10 +183,10 @@ public class Main {
                     if(created) {
                         int rows = (int) fldRows.getValue();
                         int cols = (int) fldColumns.getValue();
-                        table.setModel(new DefaultTableModel(rows, cols));
-                        intMatrix.bubbleSort();
-                        TableModel model = IntMatrix.printMatrix(intMatrix,rows,cols);
-                        table.setModel(model);
+                        for(int i = 0;i < 2; i++) {
+                            TableModel model = intMatrix.gradientMatrix(rows, cols, 5);
+                            table.setModel(model);
+                        }
                     }
                 }
             });
