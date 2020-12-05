@@ -72,6 +72,26 @@ public class IntMatrix {
                     BubbleSort.sortArray(rowMatrix);
                     break;
                 }
+                case 6:{
+                    ShakerSort.sortArray(rowMatrix);
+                    break;
+                }
+                case 7:{
+                    GnomeSort.sortArray(rowMatrix);
+                    break;
+                }
+                case 8:{
+                    ShellSort.sortArray(rowMatrix);
+                    break;
+                }
+                case 9:{
+                    HeapSort.sortArray(rowMatrix);
+                    break;
+                }
+                case 10:{
+                    RadixSort.sortArray(rowMatrix);
+                    break;
+                }
             }
             for(int j = k; j >= 0; j--){
                 arraylist[i][j]=rowMatrix[k];
@@ -102,6 +122,26 @@ public class IntMatrix {
                 }
                 case 5:{
                     BubbleSort.sortArray(colMatrix);
+                    break;
+                }
+                case 6:{
+                    ShakerSort.sortArray(colMatrix);
+                    break;
+                }
+                case 7:{
+                    GnomeSort.sortArray(colMatrix);
+                    break;
+                }
+                case 8:{
+                    ShellSort.sortArray(colMatrix);
+                    break;
+                }
+                case 9:{
+                    HeapSort.sortArray(colMatrix);
+                    break;
+                }
+                case 10:{
+                    RadixSort.sortArray(colMatrix);
                     break;
                 }
             }

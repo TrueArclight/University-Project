@@ -1,4 +1,5 @@
 package com.cmp;
+
 import java.awt.*;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -191,71 +192,95 @@ public class Main {
                 }
             });
 
-            JButton sort6 = new JButton("Метод сортировки 6");
+            JButton sort6 = new JButton("Shaker Sort");
             constraints.gridy   = 5  ;
             sortirovka.add(sort6,constraints);
 
             sort6.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    int rows = (int) fldRows.getValue();
-                    int cols = (int) fldColumns.getValue();
-                    table.setModel(new DefaultTableModel(rows, cols));
+                    if(created) {
+                        int rows = (int) fldRows.getValue();
+                        int cols = (int) fldColumns.getValue();
+                        for(int i = 0;i < 2; i++) {
+                            TableModel model = intMatrix.gradientMatrix(rows, cols, 6);
+                            table.setModel(model);
+                        }
+                    }
                 }
             });
 
-            JButton sort7 = new JButton("Метод сортировки 7");
+            JButton sort7 = new JButton("Gnome Sort");
             constraints.gridy   = 6  ;
             sortirovka.add(sort7,constraints);
 
             sort7.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    int rows = (int) fldRows.getValue();
-                    int cols = (int) fldColumns.getValue();
-                    table.setModel(new DefaultTableModel(rows, cols));
+                    if(created) {
+                        int rows = (int) fldRows.getValue();
+                        int cols = (int) fldColumns.getValue();
+                        for(int i = 0;i < 2; i++) {
+                            TableModel model = intMatrix.gradientMatrix(rows, cols, 7);
+                            table.setModel(model);
+                        }
+                    }
                 }
             });
 
-            JButton sort8 = new JButton("Метод сортировки 8");
+            JButton sort8 = new JButton("Shell Sort");
             constraints.gridy   = 7  ;
             sortirovka.add(sort8,constraints);
 
             sort8.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    int rows = (int) fldRows.getValue();
-                    int cols = (int) fldColumns.getValue();
-                    table.setModel(new DefaultTableModel(rows, cols));
+                    if(created) {
+                        int rows = (int) fldRows.getValue();
+                        int cols = (int) fldColumns.getValue();
+                        for(int i = 0;i < 2; i++) {
+                            TableModel model = intMatrix.gradientMatrix(rows, cols, 8);
+                            table.setModel(model);
+                        }
+                    }
                 }
             });
 
-            JButton sort9 = new JButton("Метод сортировки 9");
-            constraints.gridy   = 8  ;
+            JButton sort9 = new JButton("Heap Sort");
+            constraints.gridy = 8;
             sortirovka.add(sort9,constraints);
 
             sort9.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    int rows = (int) fldRows.getValue();
-                    int cols = (int) fldColumns.getValue();
-                    table.setModel(new DefaultTableModel(rows, cols));
+                    if(created) {
+                        int rows = (int) fldRows.getValue();
+                        int cols = (int) fldColumns.getValue();
+                        for(int i = 0;i < 2; i++) {
+                            TableModel model = intMatrix.gradientMatrix(rows, cols, 9);
+                            table.setModel(model);
+                        }
+                    }
                 }
             });
 
-            JButton sort10 = new JButton("Метод сортировки 10");
+            JButton sort10 = new JButton("Radix Sort");
             constraints.gridy   = 9  ;
             sortirovka.add(sort10,constraints);
 
             sort10.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    int rows = (int) fldRows.getValue();
-                    int cols = (int) fldColumns.getValue();
-                    table.setModel(new DefaultTableModel(rows, cols));
+                    if(created) {
+                        int rows = (int) fldRows.getValue();
+                        int cols = (int) fldColumns.getValue();
+                        for(int i = 0;i < 2; i++) {
+                            TableModel model = intMatrix.gradientMatrix(rows, cols, 10);
+                            table.setModel(model);
+                        }
+                    }
                 }
             });
-
             add(sortirovka, BorderLayout.WEST);
         }
     }
