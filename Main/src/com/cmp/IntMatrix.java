@@ -18,7 +18,7 @@ public class IntMatrix {
     }
     public static TableModel fillMatrixByRandomValues(int rows, int cols) {
         Random random = new Random();
-        if(rows > n | cols > m | rows < n | cols < m) {
+        if(rows > n || cols > m || rows < n || cols < m) {
             throw new IndexOutOfBoundsException();
         }
         int[][] arraylist = new int[rows][cols];
@@ -35,7 +35,7 @@ public class IntMatrix {
         return new DefaultTableModel(arrlist,arrcols);
     }
     public static TableModel gradientMatrix(int rows,int cols,int sort){
-        int k = 0;
+        int k = 0, b;
         int[][] arraylist = new int [rows][cols];
         int[] rowMatrix = new int [cols];
         int[] colMatrix = new int [rows];
@@ -98,8 +98,12 @@ public class IntMatrix {
                 k--;
             }
             k++;
+            if( i >= cols) {
+                b = cols -1;
+            }
+            else b = i;
             for(int j = 0 ;j < rows; j++){
-                colMatrix[k] = arraylist[j][i];
+                colMatrix[k] = arraylist[j][b];
                 k++;
             }
             k--;
@@ -146,7 +150,7 @@ public class IntMatrix {
                 }
             }
             for(int j = k;j >= 0; j--){
-                arraylist[j][i] = colMatrix[k];
+                arraylist[j][b] = colMatrix[k];
                 k--;
             }
         }
