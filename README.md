@@ -1,2 +1,1 @@
-# project-lab
-# лабораторная работа №3
+# project-lab№3
